@@ -1,0 +1,38 @@
+{
+  "checked_at_utc": "2026-10-13T16:49:57.499706+00:00",
+  "base_url": "http://127.0.0.1:7860",
+  "model_available": false,
+  "scope": "services_only",
+  "passed": true,
+  "checks": [
+    {
+      "name": "streamlit_html",
+      "status": "passed"
+    },
+    {
+      "name": "streamlit_health",
+      "status": "passed"
+    },
+    {
+      "name": "streamlit_websocket",
+      "status": "passed"
+    },
+    {
+      "name": "fastapi_health",
+      "status": "passed"
+    },
+    {
+      "name": "openapi_and_swagger",
+      "status": "passed"
+    },
+    {
+      "name": "model_metadata",
+      "status": "passed"
+    },
+    {
+      "name": "prediction_shap_lime_global",
+      "status": "skipped",
+      "detail": "No active model; train and activate it in Streamlit, then rerun with --require-model"
+    }
+  ]
+}

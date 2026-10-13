@@ -1,0 +1,39 @@
+{
+  "executed_at_utc": "2026-10-13T16:40:15.406017+00:00",
+  "python": "3.11.7",
+  "packages": {
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "shap": "0.51.0",
+    "lime": "0.2.0.1",
+    "fastapi": "0.143.0"
+  },
+  "rows": 10000,
+  "positive_count": 339,
+  "features": [
+    "Type",
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]"
+  ],
+  "train_rows": 7500,
+  "test_rows": 2500,
+  "test_size": 0.25,
+  "seed": 42,
+  "hyperparameters": {
+    "trees": 130,
+    "depth": 5,
+    "neighbors": 7,
+    "C": 1.0,
+    "lr": 0.07
+  },
+  "tune": false,
+  "selected_model": "XGBoost",
+  "selection": "Descriptive: maximum AP on test; independent validation required",
+  "threshold": 0.5,
+  "dataset_sha256": "eb4abb010aaae049d8eb059ab027309dbf8ab79effea8102310f1685614b1ecd"
+}

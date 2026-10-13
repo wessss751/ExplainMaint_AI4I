@@ -1,0 +1,11 @@
+{
+  "one_pager_final.pdf": "2aa24a10109eaf6705a5e9b10869c6142a5f7a77315d6bddec145d6a3e52deee",
+  "one_pager_modele.pdf": "527ec218079110b2a8fbb0f340bc69abb2c1a9ad4e19a132979917b448c42837",
+  "assets/sujet_officiel.pdf": "c48a0e906f1658aa7092b381f15e40c70f6281d825309883bd2d2a60d8fa7cd5",
+  "assets/captures/01_donnees.png": "b6dc5739c490079d8a9ec0b0012a222a9ddc74efde8959dab1b0e5697a4a5c24",
+  "assets/captures/02_comparaison.png": "afe78d06903dd68ec1239be607ffe768eac31ba4fc2309a283e35753b13a7b94",
+  "assets/captures/03_courbes.png": "95821ef2efe90d0e51d201371a34dd32017b1a726360a0c7f14fdf8c6e32466e",
+  "assets/captures/04_shap_global.png": "d2280a0c98169396165ad96413d5c40526f852803b99c6b13d81167f6438ada3",
+  "assets/captures/05_shap_lime_local.png": "297c81832a69c7c34d64b37e8a6bf218306456d59f3b1c86a45ba16dc41b9729",
+  "assets/captures/06_api_modele_actif.png": "c8a857c5502b2a99575c5e2dfdec983e576d63f8d74f1bfb1a1e0e3fe462db04"
+}

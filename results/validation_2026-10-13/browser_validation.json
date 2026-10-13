@@ -1,0 +1,50 @@
+{
+  "started_at_utc": "2026-10-13T16:50:02.418797+00:00",
+  "base_url": "http://127.0.0.1:7860",
+  "passed": false,
+  "steps": [
+    {
+      "name": "UCI loaded: 10000 observations",
+      "status": "passed"
+    },
+    {
+      "name": "Preparation: default AI4I predictors and stratified test settings",
+      "status": "passed"
+    },
+    {
+      "name": "All five models trained through the UI; actual metrics CSV downloaded",
+      "status": "passed"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "results/validation_2026-10-13/captures/01_donnees_navigateur.png",
+      "bytes": 132785,
+      "sha256": "4cea27417ea14b8661365398662467dad077b0f2974c8399b04c548ec806b2b5"
+    },
+    {
+      "path": "results/validation_2026-10-13/captures/02_preparation_navigateur.png",
+      "bytes": 105603,
+      "sha256": "d0c847cc585676b67b37b0d70a905a3a7e1c7f484bcd71b290db275a8804a768"
+    },
+    {
+      "path": "results/validation_2026-10-13/comparaison_modeles_navigateur.csv",
+      "bytes": 281,
+      "sha256": "29a25d0c08c7ac78baa300b0413cc2be150db9cc44866ae49e9729527e950e96"
+    },
+    {
+      "path": "results/validation_2026-10-13/captures/03_modeles_navigateur.png",
+      "bytes": 122012,
+      "sha256": "f67e8f78cd626ee63f6034c8b6a9b6bcf3166f57d20b9a3e3fdd0fbf4ba6eb6b"
+    },
+    {
+      "path": "results/validation_2026-10-13/captures/failure.png",
+      "bytes": 137803,
+      "sha256": "3ffb9dd35eca18f28e327d397bcaa114e96fbefe381d02ba3462b206cced78f7"
+    }
+  ],
+  "browser_errors": [],
+  "browser_version": "155.0.4283.45",
+  "error": "AssertionError: Locator expected to contain text 'XGBoost'\nActual value: Modèle détaillé \nCall log:\n  - Expect \"to_contain_text\" get_by_test_id(\"stSelectbox\").filter(has=get_by_text(\"Modèle détaillé\", exact=True)) with timeout 180000ms\n  - waiting for get_by_test_id(\"stSelectbox\").filter(has=get_by_text(\"Modèle détaillé\", exact=True))\n    356 × locator resolved to <div class=\"stSelectbox\" data-testid=\"stSelectbox\">…</div>\n        - unexpected value \"Modèle détaillé\"\n\nAria snapshot:\n- group:\n  - combobox \"Modèle détaillé\": XGBoost\n  - button \"Open\"",
+  "finished_at_utc": "2026-10-13T16:53:20.751936+00:00"
+}

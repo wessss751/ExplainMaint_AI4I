@@ -1,0 +1,93 @@
+{
+  "record": {
+    "Type": "L",
+    "Air temperature [K]": 298.9,
+    "Process temperature [K]": 310.2,
+    "Rotational speed [rpm]": 1409,
+    "Torque [Nm]": 54.8,
+    "Tool wear [min]": 140
+  },
+  "threshold": 0.5,
+  "model": "XGBoost",
+  "probability": 0.023978015407919884,
+  "base_value": 0.09500790420729159,
+  "names": [
+    "num__Air temperature [K]",
+    "num__Process temperature [K]",
+    "num__Rotational speed [rpm]",
+    "num__Torque [Nm]",
+    "num__Tool wear [min]",
+    "cat__Type_H",
+    "cat__Type_L",
+    "cat__Type_M"
+  ],
+  "encoded_values": [
+    -0.5534689053548072,
+    0.1314272387775773,
+    -0.7228533034045317,
+    1.4817255109247676,
+    0.5095392685020214,
+    0.0,
+    1.0,
+    0.0
+  ],
+  "shap_values": [
+    -0.034357269797262474,
+    0.022478773441186855,
+    0.015851212096061898,
+    0.011498843639327046,
+    -0.09090241552753883,
+    0.0007909998001361341,
+    0.002568332722347062,
+    0.0010416348263706
+  ],
+  "lime": [
+    {
+      "variable": "num__Torque [Nm]",
+      "weight": 0.07751115866076827
+    },
+    {
+      "variable": "num__Tool wear [min]",
+      "weight": 0.06574761136417044
+    },
+    {
+      "variable": "num__Air temperature [K]",
+      "weight": 0.061445759135774734
+    },
+    {
+      "variable": "num__Rotational speed [rpm]",
+      "weight": -0.040312282316513674
+    },
+    {
+      "variable": "cat__Type_L",
+      "weight": 0.01478507282119154
+    },
+    {
+      "variable": "num__Process temperature [K]",
+      "weight": -0.01254820568358969
+    },
+    {
+      "variable": "cat__Type_H",
+      "weight": -0.0049096926100070624
+    },
+    {
+      "variable": "cat__Type_M",
+      "weight": 0.0024430941533288416
+    }
+  ],
+  "summary": "Le modèle estime un risque de panne de 2.4%. Les facteurs qui augmentent ce risque sont : Process temperature [K].",
+  "top_shap": [
+    {
+      "variable": "num__Tool wear [min]",
+      "contribution": -0.0909
+    },
+    {
+      "variable": "num__Air temperature [K]",
+      "contribution": -0.03436
+    },
+    {
+      "variable": "num__Process temperature [K]",
+      "contribution": 0.02248
+    }
+  ]
+}

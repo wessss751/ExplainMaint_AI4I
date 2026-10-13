@@ -1,0 +1,14 @@
+{
+  "transport": "TestClient in-process, no public deployment",
+  "statuses": {
+    "/health": 200,
+    "/model": 200,
+    "/global?n=2": 200,
+    "/docs": 200,
+    "/openapi.json": 200,
+    "POST /explain": 200
+  },
+  "model": "XGBoost",
+  "probability": 0.023978015407919884,
+  "decision": 0
+}
