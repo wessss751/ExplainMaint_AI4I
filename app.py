@@ -32,6 +32,60 @@ def uci_data():
 
 API_URL = os.environ.get('EXPLAINMAINT_API_URL', 'http://127.0.0.1:8000').rstrip('/')
 
+# Démarrage automatique de FastAPI pour Streamlit Cloud
+import subprocess
+import sys
+import time
+
+@st.cache_resource(show_spinner=False)
+def start_local_api():
+    # Ne pas démarrer de serveur si une API externe est configurée.
+    if os.environ.get("EXPLAINMAINT_API_URL"):
+        return None
+
+    # Vérifier si FastAPI fonctionne déjà.
+    try:
+        response = requests.get(f"{API_URL}/health", timeout=2)
+        if response.ok:
+            return None
+    except requests.RequestException:
+        pass
+
+    # Démarrer FastAPI dans un processus indépendant.
+    process = subprocess.Popen(
+        [
+            sys.executable, "-m", "uvicorn",
+            "api:app",
+            "--host", "127.0.0.1",
+            "--port", "8000"
+        ],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.STDOUT
+    )
+
+    # Attendre que le service soit réellement disponible.
+    for _ in range(30):
+        if process.poll() is not None:
+            raise RuntimeError("FastAPI s'est arrêté pendant le démarrage.")
+
+        try:
+            response = requests.get(f"{API_URL}/health", timeout=1)
+            if response.ok:
+                return process
+        except requests.RequestException:
+            pass
+
+        time.sleep(1)
+
+    process.terminate()
+    raise RuntimeError("FastAPI n'a pas démarré après 30 secondes.")
+
+
+try:
+    start_local_api()
+except Exception as exc:
+    st.warning(f"Service FastAPI indisponible : {exc}")
+
 def try_api(method, route, **kwargs):
     try:
         resp = requests.request(method, API_URL + route, timeout=75, **kwargs)
